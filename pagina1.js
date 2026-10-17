@@ -1,10 +1,15 @@
-// Función: guarda el nombre y cambia de página
 function guardar() {
- const nombre = document.getElementById("nombre").value;
- sessionStorage.setItem("nombre", nombre); // guarda en la bodega
- const ciudad = document.getElementById("ciudad").value;
- sessionStorage.setItem("ciudad", ciudad);
- window.location.href = "pagina2.html"; // cambia de página
+  const nombre = document.getElementById("nombre").value;
+  const ciudad = document.getElementById("ciudad").value;
+
+  if (nombre === "" || ciudad === "") {
+    document.getElementById("mensaje").textContent = "Por favor escribe tu nombre.";
+    return; // no guarda nada y no cambia de página
+  }
+
+  sessionStorage.setItem("nombre", nombre);
+  sessionStorage.setItem("ciudad", ciudad);
+  window.location.href = "pagina2.html";
 }
-// Evento: al hacer clic en el botón, se ejecuta guardar
+
 document.getElementById("btn-guardar").addEventListener("click", guardar);
