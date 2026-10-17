@@ -1,15 +1,17 @@
-// Función: lee el nombre y lo muestra
+// Función: lee el nombre y la ciudad y los muestra
 function mostrarNombre() {
  const nombre = sessionStorage.getItem("nombre"); // lee de la bodega
+ const ciudad = sessionStorage.getItem("ciudad"); // lee la ciudad
  if (nombre === null) {
  document.getElementById("saludo").textContent = "No hay ningún nombre guardado.";
  } else {
- document.getElementById("saludo").textContent = "Hola, " + nombre;
+ document.getElementById("saludo").textContent = "Hola, " + nombre + ", de " + ciudad;
  }
 }
 // Función: borra el nombre y vuelve a mostrar el resultado
 function borrar() {
  sessionStorage.removeItem("nombre"); // borra de la bodega
+ sessionStorage.removeItem("ciudad");
  mostrarNombre(); // actualiza el mensaje
 }
 // Función regresar a la pagina principal
