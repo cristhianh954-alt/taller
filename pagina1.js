@@ -4,7 +4,7 @@ function guardar() {
 
   if (nombre === "" || ciudad === "") {
     document.getElementById("mensaje").textContent = "Por favor escribe tu nombre.";
-    return; // no guarda nada y no cambia de página
+    return;
   }
 
   sessionStorage.setItem("nombre", nombre);
