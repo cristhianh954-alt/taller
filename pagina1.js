@@ -3,7 +3,7 @@ function guardar() {
   const ciudad = document.getElementById("ciudad").value;
 
   if (nombre === "" || ciudad === "") {
-    document.getElementById("mensaje").textContent = "Por favor escribe tu nombre.";
+    document.getElementById("mensaje").textContent = "Por favor escribe tu nombre y Ciudad.";
     return;
   }
 
