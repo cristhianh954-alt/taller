@@ -60,3 +60,10 @@ footer {
 footer p {
   margin: 5px 0;
 }
+
+css
+#mensaje {
+  margin: 0;
+  color: red;
+  font-weight: bold;
+}
