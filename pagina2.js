@@ -14,7 +14,7 @@ function borrar() {
 }
 // Función regresar a la pagina principal
 function Principal() {
-    window.location.href="pagina1.html"
+    window.location.href="index.html"
 }
 // Eventos
 document.addEventListener("DOMContentLoaded", mostrarNombre); // al cargar la página
