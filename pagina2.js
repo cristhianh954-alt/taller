@@ -18,7 +18,14 @@ function borrar() {
 function Principal() {
     window.location.href="index.html"
 }
+
+// Función borrar todo
+function borrarTodo() {
+ localStorage.clear();
+ mostrarNombre();
+}
 // Eventos
 document.addEventListener("DOMContentLoaded", mostrarNombre); // al cargar la página
 document.getElementById("btn-borrar").addEventListener("click", borrar); // al hacer clic
 document.getElementById("btn-pagprincipal").addEventListener("click", Principal);
+document.getElementById("btn-borrar-todo").addEventListener("click", borrarTodo);
