@@ -2,6 +2,8 @@
 function guardar() {
  const nombre = document.getElementById("nombre").value;
  sessionStorage.setItem("nombre", nombre); // guarda en la bodega
+ const ciudad = document.getElementById("ciudad").value;
+ sessionStorage.setItem("ciudad", ciudad);
  window.location.href = "pagina2.html"; // cambia de página
 }
 // Evento: al hacer clic en el botón, se ejecuta guardar
